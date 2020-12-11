@@ -3,9 +3,9 @@
 | Column      | Type       | Options                        |
 | ----------- | ---------- | ------------------------------ |
 | name        | string     | null: false                    |
-| age         | integer    | null: false                    |
 | position_id | integer    | null: false                    |
-
+| name_kana
+| user_id
 
 
 
