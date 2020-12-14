@@ -9,7 +9,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password%>
+    <%= f.label :password, "パスワード"%>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
@@ -17,18 +17,23 @@
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "パスワード(確認)" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
   
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, "フルネーム" %><br />
     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
   </div>
 
+  <div class="field">
+    <%= f.label :name_kana, "フリガナ" %><br />
+    <%= f.text_field :name_kana, autofocus: true, autocomplete: "name_kana" %>
+  </div>
+
  <div class="field">
-   <%= f.label :Position_id %><br />
-   <%= f.collection_select(:position_id, Position.all, :id, :name %>
+   <%= f.label :Position_id, "役職" %><br />
+   <%= f.collection_select :position_id, Position.all, :id, :name %>
  </div>
 
 
