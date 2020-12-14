@@ -19,4 +19,4 @@ admin :boolean, default: false
 
 published_at :datetime  null: false
 arrival_date, :date, null false
- user_id references
+user_id references
