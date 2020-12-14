@@ -8,9 +8,10 @@ class User < ApplicationRecord
 
   
   with_options presence: true do
-    validates :user_name
+    validates :user_name format: {with: }
     validates :position_id, numericality: { other_than: 1 }
-    validates :name_kana
+    validates :name_kana, format: {with: /\A[ぁ-んァ-ン一-龥]+\z/}
+    validates :name_kana, format: {with: /\A[\p{katakana} ー－&&[^ -~｡-ﾟ]]+\z/}
   end
 
 #  emailを不使用に
