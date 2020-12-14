@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  
-root to: 'shifts#index'
+  devise_for :users, controllers: {
+    sessions:      'users/sessions',
+    passwords:     'users/passwords',
+    registrations: 'users/registrations'
+}
+   root to: 'shifts#index'
 end

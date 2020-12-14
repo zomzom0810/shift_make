@@ -1,24 +1,22 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+| Column      | Type       | Options                        |
+| ----------- | ---------- | ------------------------------ |
+| name        | string     | null: false                    |
+| position_id | integer    | null: false                    |
+| name_kana
+| user_id
 
-* Ruby version
 
-* System dependencies
 
-* Configuration
 
-* Database creation
 
-* Database initialization
+name, string, null: false
+position_id, integer, null: false
+encrypted_password
+admin :boolean, default: false
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+published_at :datetime  null: false
+arrival_date, :date, null false
+user_id references
