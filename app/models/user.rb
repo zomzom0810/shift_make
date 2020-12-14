@@ -10,6 +10,7 @@ class User < ApplicationRecord
   with_options presence: true do
     validates :user_name
     validates :position_id, numericality: { other_than: 1 }
+    validates :name_kana
   end
 
 #  emailを不使用に

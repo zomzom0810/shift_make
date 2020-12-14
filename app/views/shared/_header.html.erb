@@ -1,6 +1,12 @@
-<div id="header">
-  <div class="logo">
-    <a href="#">ログインユーザーさん</a>
-  </div>
- 
-</div>
+<div id="header ">
+   <nav class="navbar navbar-light bg-light">
+<%if !user_signed_in? %>
+  <li class="btn btn-outline-success"><%= link_to 'ログイン', "/users/sign_in"%></li>
+<% else %> 
+  <li class="list-unstyled"><%= "#{current_user.name}さん"%></li>
+  <li class="btn btn-sm btn-outline-secondary"><%= link_to 'ログアウト', "/users/sign_out", method: :delete%></li>
+<% end %>
+</nav>
+ </div>
+
+
